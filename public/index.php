@@ -40,14 +40,17 @@ $segundo = date("s");?>
             <li><a href="https://www.php.net/manual/pt_BR/index.php" target="blank">Manual do PHP</a></li>
             <li><a href="https://www.w3schools.com/php/php_intro.asp" target="blank">W3schools PHP</a></li>
             <li><a href="" target="blank">João Ribeiro PHP</a>
-                <ul>
-                    <li><a href="" target="blank">PHP Parte2</a><li>
-                    <li><a href="" target="blank">Loja Virtual</a></li>
+                <ul class="ul_sub">
+                    <li><a href="https://www.youtube.com/watch?v=krQj4stNu5U&list=PLXik_5Br-zO_5EGPG6_u-u0hVI_f_ThO_" target="blank">PHP Boas Práticas 2017</a><li>
+                    <li><a href="https://www.youtube.com/watch?v=jVUeF7cZdFE&list=PLXik_5Br-zO9wODVI0j58VuZXkITMf7gZ" target="blank">PHP Curso Completo 2020</a><li>
+                    <li><a href="https://www.youtube.com/watch?v=iDEuQjITm0E&list=PLXik_5Br-zO9Z8l3CE8zaIBkVWjHOboeL" target="blank">Curso Completo Parte2 2021</a><li>
+                    <li><a href="https://www.youtube.com/watch?v=OMn8y1RE4FE&list=PLXik_5Br-zO-tsUy1lTPB8dnPGBu8n0Ee&index=3" target="blank">PHP Loja Virtual</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=gsPp71nRMQk&list=PLXik_5Br-zO8vLD6X9uB-EH6BpgZL8XBH" target="blank">PHP APIs</a></li>
                 </ul></li>
-            <li><a href="" target="blank">Curso em Video PHP</a></li>
-            <li><a href="" target="blank">Edson Maia PHP</a></li>
-            <li><a href="https://www.youtube.com/watch?v=71dz_gaE798&list=PLx4x_zx8csUgB4R1dDXke4uKMq-IrSr4B&index=3" target="blank">CFBCursos PHP</a></li>
-            <li><a href="" target="blank">Celke PHP</a></li>
+            <li><a href="https://www.youtube.com/watch?v=F7KzJ7e6EAc&list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9k&index=1" target="blank">PHP Curso em Video 2014</a></li>
+            <li><a href="https://www.youtube.com/watch?v=R2KdI-DDYCc&list=PLnex8IkmReXw-QlzKS9zA3rXQsRnK5nnA&index=3" target="blank">PHP7 Edson Maia PHP 2021</a></li>
+            <li><a href="https://www.youtube.com/watch?v=71dz_gaE798&list=PLx4x_zx8csUgB4R1dDXke4uKMq-IrSr4B&index=3" target="blank">PHP CFBCursos 2014</a></li>
+            <li><a href="https://celke.com.br/clms/home/index" target="blank">Celke PHP Development</a></li>
         </ul>
     </div>
     <header class="header_nav container-fluid">
@@ -67,7 +70,7 @@ $segundo = date("s");?>
         <section class="sec_princ">
             <h1 class="m-3"> Aprendendo e Praticando <a href="https://www.php.net/manual/pt_BR/index.php" target="blank">PHP</a></h1>
 <!--=======================================================================================================================-->
-            <h2 class="mt-3">Tags de comentário de do PHP</h2>
+            <h2 class="mt-3">Tags de comentário do PHP</h2>
             <!-- Os comentários no HTML são neste formato -->
             # Os comentários no PHP são neste formato <br>
             // Os comentários no PHP são neste formato<br>
@@ -87,7 +90,7 @@ $segundo = date("s");?>
             <span class="codigo">echo <?= "\"Texto concatenado com\" ".$variavel.'\'concatenado com numeros \'' ."\"123\"";?>;</span><br>
             <hr>
 <!--=======================================================================================================================-->
-            <h2 class="mt-3">$variaveis e _CONSTANTES do PHP</h2>
+            <h2 class="mt-3">$variaveis e CONSTANTES do PHP</h2>
             <h4><a href="https://www.php.net/manual/pt_BR/language.variables.basics.php" target="blank">$variaveis</a></h4>
             <p>Para definir o nome de uma variavel basta colocar o <span class="codigo">$nome</span>, na frente da palavra, que não pode começar com numero, nem ter caracteres especiais ou acentuação e nem possuir mais de 32 caracteres, o valor para a mesma deve ser atribuido com <span class="codigo">=valor</span>.</p>
             
