@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* Aqui vai ser meu arquivo CSS para testes de PHP, criado 20/09/2022 */
+body{
+    background-color: rgb(26, 26, 26);
+    color: white;
+    font-size: 1.1em;
+}
+.menu_lateral{
+    position: fixed;
+    display: block;
+    top: 50px;
+    left: 30px;
+    width: fit-content;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 30px 10px 0px;
+}
+.menu_lateral a,ul{
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+.right_bar{
+    position: fixed;
+    display: block;
+    top: 50px;
+    right: 0px;
+    width: 300px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 30px 10px 0px;
+}
+h1,h2{
+    color: rgb(256, 0, 0);
+    background-color: black;
+    font-weight: 600;
+}
+h3,h4{
+    width: fit-content;
+    color: rgb(74, 65, 234);
+    background-color: black;
+    padding: 0 10px 0 10px;
+}
+span.codigo{
+    width: fit-content;
+    color: rgb(241, 241, 244);
+    background-color: black;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 5px 0 5px;
+}
+header.header_nav{
+    display: flex;
+    height: 5vh;
+    align-items: center;
+    background-color: black;
+    color: antiquewhite;
+    /* border: 1px dotted rgb(111, 248, 48); */
+}
+.div_cookie{
+    display: flex;
+    padding: 0px;
+}
+.div_data{
+    display: flex;
+    padding: 0px;
+}
+.text_peq{
+    font-size: 0.7em;
+}
+nav.navbar_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 30, 30);
+    color: rgb(250, 179, 86);
+    /* border: 1px dashed rgb(250, 179, 86); */
+}
+.div_row{
+    display: flex;
+    color: white;
+}
+.text_menu{
+    display: flex;
+    font-size: 1.8em;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0px;
+    color: red;
+}
+main.main_cont{
+    display: flex;
+    /* height: 90vh; */
+    height: max-content;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    /* border: 1px solid rgb(221, 133, 17); */
+}
+.sec_princ{
+    display: block;
+    padding: 20px;
+    background-color: rgb(17, 29, 19);
+    color: rgb(255, 255, 255);
+    /* border: 1px solid rgb(221, 128, 7); */
+}
+.sec_princ h1{
+    text-align: center;
+}
+.aside_col{
+    display: block;
+    background-color: rgb(29, 4, 101);
+    color: rgb(53, 93, 167);
+    /* border: 1px solid rgb(112, 164, 236); */
+}
+footer.foot_cont{
+    display: flex;
+    height: 5vh;
+    background-color: black;
+    color: rgb(255, 254, 253);
+    /* border: 1px dotted rgb(111, 248, 48); */
+}
+.div_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
