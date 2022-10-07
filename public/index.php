@@ -74,7 +74,8 @@ $segundo = date("s");?>
             <!-- Os comentários no HTML são neste formato -->
             # Os comentários no PHP são neste formato <br>
             // Os comentários no PHP são neste formato<br>
-            /* Os comentários no PHP são neste formato, para comentar mais de uma linha */<br>
+            /* Os comentários no PHP são neste formato, para comentar mais de uma linha */<br><br>
+            <h4><a href="https://www.php.net/manual/pt_BR/extensions.membership.php#extensions.membership.core" target="blank">Extensões Principais</a></h4>
             <?= "<hr>"; ?><!-- Forma simplificada de imprimir um echo -->
 <!--=======================================================================================================================-->
             <h2 class="mt-3">Tags ECHO e PRINT para Imprimir informações na tela</h2>
@@ -93,17 +94,34 @@ $segundo = date("s");?>
             <h2 class="mt-3">$variaveis e CONSTANTES do PHP</h2>
             <h4><a href="https://www.php.net/manual/pt_BR/language.variables.basics.php" target="blank">$variaveis</a></h4>
             <p>Para definir o nome de uma variavel basta colocar o <span class="codigo">$nome</span>, na frente da palavra, que não pode começar com numero, nem ter caracteres especiais ou acentuação e nem possuir mais de 32 caracteres, o valor para a mesma deve ser atribuido com <span class="codigo">=valor</span>.</p>
-            Para verificar se uma $variavel foi declarada(definida, mesmo q sem valor) usamos: <span class="codigo">isset('');</span> ou <span class="codigo">defined('');</span><br><?php $v_teste="variavel 18+"; 
-            if(isset($v_teste)){ echo "Existe a variavel: ".$v_teste."<br>";} ?>
+            Para verificar se uma $variavel foi declarada(definida, mesmo q sem valor) usamos: <span class="codigo">isset();</span><br><?php $v_teste='+Variável'; if(isset($v_teste)){ echo "Existe a variavel: ".$v_teste."<br>";}?><br>
               
             <h4>Tipos de variaveis:</h4>
             <?php $v_numero=41;?><span class="codigo">$inteiro = <?=$v_numero?>;</span> Tipo (numérico)Inteiro, (int) (integer)<br>
             <?php $v_nome="palavra";?><span class="codigo">$caracter = "<?=$v_nome?>";</span> Deve ser declarada entre aspas, simples ou dupla (string)<br> 
             <span class="codigo">$real = 1.47;</span> Deve sempre ser separado por ponto, (float) (double) (real)<br>
-            <span class="codigo">$logico = true;</span> Pode ser (false = 0) ou (true = 1)<br><br><hr>
+            <span class="codigo">$logico = true;</span> Pode ser (false = 0) ou (true = 1)<br><br>
+            <h4>Variáveis pré-definidas</h4>
+                Superglobais — Variáveis nativas que estão sempre disponíveis em todos escopos<br>
+                <span class="codigo">$GLOBALS</span> — Referencia todas variáveis disponíveis no escopo global<br>
+                <span class="codigo">$_SERVER</span> — Informação do servidor e ambiente de execução<br>
+                <span class="codigo">$_GET</span> — Variáveis HTTP GET<br>
+                <span class="codigo">$_POST</span> — HTTP POST variables<br>
+                <span class="codigo">$_FILES</span> — Variáveis de Upload de Arquivos HTTP<br>
+                <span class="codigo">$_REQUEST</span> — Variáveis de requisição HTTP<br>
+                <span class="codigo">$_SESSION</span> — Variáveis de sessão<br>
+                <span class="codigo">$_ENV</span> — Variáveis de ambiente<br>
+                <span class="codigo">$_COOKIE</span> — Cookies HTTP<br>
+                <span class="codigo">$php_errormsg</span> — A mensagem de erro anterior<br>
+                <span class="codigo">$http_response_header</span> — Cabeçalhos de resposta HTTP<br>
+                <span class="codigo">$argc</span> — O número de argumentos passados para o script<br>
+                <span class="codigo">$argv</span> — Array de argumentos passados para o script<br>
+            <hr>
             
             <h4><a href="https://www.php.net/manual/pt_BR/language.constants.php" target="blank">CONSTANTES:</a></h4>
             <p>São variaveis que devem ser definidas para que seu valor não seja alterado no decorer do codigo. Seu nome deve preferencialmente ser declarada com letras maiúsculas</p>
+
+            <h4><a href="https://www.php.net/manual/pt_BR/reserved.constants.php#reserved.constants.core" target="blank">Principais Constantes Predefinidas</a></h4><br>
             Para declarar uma constante use o seguindte formato:<br>
             <span class="codigo">define("NOME_CONSTANTE", "valor");</span> <?php define("NOME", "Nino");?><br>
             Pode se definir uma CONSTANTE assim também: <span class="codigo">const NOME_CONSTANTE = 'Valor';</span>//embora eu não tenha certeza se faz alguma diferença.<br>
@@ -113,10 +131,30 @@ $segundo = date("s");?>
             <span class="codigo">if(defined('NOME')){echo "OK! A contante NOME está definida";};</span><?php if(defined('NOME')){echo "OK! A contante NOME está definida";};?><br>
             Para exibir uma constante, não se pode colocar a expressão inteira dentro de ASPAS, no caso de concatenar com strings é necessário o ponto.<br> 
             <span class="codigo"> define("NOME", "Nino"); echo = "O nome da constante é: ".NOME;</span> <?= "O nome da constante é: ".NOME;?><br>
-            <span class="codigo">echo constant("NOME");</span> // mesma coisa que a linha anterior: <?=constant('NOME');?><hr>
+            <span class="codigo">echo constant("NOME");</span> // mesma coisa que a linha anterior: <?=constant('NOME');?><br><br>
             
-            <h4>Super __BLOBAIS:</h4>
+            <h4>Constantes mágicas</h4>
+            Há nove constantes mágicas, que mudam dependendo de onde são utilizadas. Todas essas constantes "mágicas" são resolvidas em tempo de compilação, ao contrário das constantes regulares que são resolvidas em tempo de execução. Essas constantes especiais são case-insentitive e estão descritas a seguir:
+                <table class="table table-primary">
+                    <thead><tr><th>Constante</th><th>Definição</th><tr></thead>
+                    <tbody><tr><td>__LINE__</td><td>O número da linha corrente do arquivo.</td></tr>
+                        <tr><td>__FILE__</td><td>O caminho completo e nome do arquivo com links simbólicos resolvidos. Se utilizado dentro de um include, o nome do arquivo incluído será retornado.</td></tr>
+                        <tr><td>__DIR__</td><td>O diretório do arquivo. Se usado dentro de um include, o diretório do arquivo incluído é retornado. É equivalente a dirname(__FILE__). O nome do diretório não possui barra no final, a não ser que seja o diretório raiz.</td></tr>
+                        <tr><td>__FUNCTION__</td><td>O nome da função, or {closure} para funções anônimas.</td></tr>
+                        <tr><td>__CLASS__</td><td>O nome da classe. O nome da classe inclui o namespace em que foi declarado (por exemplo, Foo\Bar). Quando utilizada em um método trait, __CLASS__ é o nome da classe que está utilizando a trait.</td></tr>
+                        <tr><td>__TRAIT__</td><td>O nome do trait. O nome do trait inclui o namespace em que foi declarado (por exemplo, Foo\Bar).</td></tr>
+                        <tr><td>__METHOD__</td><td>O nome do método da classe.</td></tr>
+                        <tr><td>__NAMESPACE__</td><td>O nome do namespace corrente.</td></tr>
+                        <tr><td>ClassName::class</td><td>O nome qualificado completo da classe.</td></tr>
+                     </tbody>
+                </table><hr>
+            
+            <h4><a href="https://www.php.net/manual/pt_BR/language.variables.superglobals.php" target="blank"> Super __BLOBAIS:</a></h4>
             <p>São CONSTANTES cujo o NOME é previamente definidas pela linguagem de programação(PHP), através de palavras chaves(__keywords), que o valor será definido automaticamente pelo sistema em execussão. e sempre começam com dois underlines seguidos do nome em letras maiúculas __GLOBAIS,</p><br><hr>
+<!--=======================================================================================================================-->
+            <h2 class="mt-3">OPERADORES:</h2>
+            <h3 class="mt-3">Operadores Logicos ou Aritméticos:</h3>
+
 <!--=======================================================================================================================-->
             <h2 class="mt-3">ARRAYs:</h2>
             <p>O array pode ser declarado misturando tipos de valores, mixed: string, numeros, float<br>
