@@ -93,19 +93,27 @@ $segundo = date("s");?>
             <h2 class="mt-3">$variaveis e CONSTANTES do PHP</h2>
             <h4><a href="https://www.php.net/manual/pt_BR/language.variables.basics.php" target="blank">$variaveis</a></h4>
             <p>Para definir o nome de uma variavel basta colocar o <span class="codigo">$nome</span>, na frente da palavra, que não pode começar com numero, nem ter caracteres especiais ou acentuação e nem possuir mais de 32 caracteres, o valor para a mesma deve ser atribuido com <span class="codigo">=valor</span>.</p>
-            
+            Para verificar se uma $variavel foi declarada(definida, mesmo q sem valor) usamos: <span class="codigo">isset('');</span> ou <span class="codigo">defined('');</span><br><?php $v_teste="variavel 18+"; 
+            if(isset($v_teste)){ echo "Existe a variavel: ".$v_teste."<br>";} ?>
+              
             <h4>Tipos de variaveis:</h4>
             <?php $v_numero=41;?><span class="codigo">$inteiro = <?=$v_numero?>;</span> Tipo (numérico)Inteiro, (int) (integer)<br>
             <?php $v_nome="palavra";?><span class="codigo">$caracter = "<?=$v_nome?>";</span> Deve ser declarada entre aspas, simples ou dupla (string)<br> 
             <span class="codigo">$real = 1.47;</span> Deve sempre ser separado por ponto, (float) (double) (real)<br>
             <span class="codigo">$logico = true;</span> Pode ser (false = 0) ou (true = 1)<br><br><hr>
             
-            <h4>CONSTANTES:</h4>
+            <h4><a href="https://www.php.net/manual/pt_BR/language.constants.php" target="blank">CONSTANTES:</a></h4>
             <p>São variaveis que devem ser definidas para que seu valor não seja alterado no decorer do codigo. Seu nome deve preferencialmente ser declarada com letras maiúsculas</p>
             Para declarar uma constante use o seguindte formato:<br>
             <span class="codigo">define("NOME_CONSTANTE", "valor");</span> <?php define("NOME", "Nino");?><br>
-            Para exibir uma constante, não se pode colocala dentro de ASPAS, no caso de concatenar com strings é necessário o ponto.<br> 
-            <span class="codigo"> define("NOME", "Nino"); echo = NOME;</span> <?=NOME;?><br><hr>
+            Pode se definir uma CONSTANTE assim também: <span class="codigo">const NOME_CONSTANTE = 'Valor';</span>//embora eu não tenha certeza se faz alguma diferença.<br>
+            <span class="codigo">const teste = 'ninojp';  echo "A constante teste é: ".teste;</span> <?php const teste = 'ninojp';  echo "A constante teste é: ".teste; ?><br><br>
+
+            Para conferir se uma constante existe usamos:<span class="codigo"> defined('');</span><br>
+            <span class="codigo">if(defined('NOME')){echo "OK! A contante NOME está definida";};</span><?php if(defined('NOME')){echo "OK! A contante NOME está definida";};?><br>
+            Para exibir uma constante, não se pode colocar a expressão inteira dentro de ASPAS, no caso de concatenar com strings é necessário o ponto.<br> 
+            <span class="codigo"> define("NOME", "Nino"); echo = "O nome da constante é: ".NOME;</span> <?= "O nome da constante é: ".NOME;?><br>
+            <span class="codigo">echo constant("NOME");</span> // mesma coisa que a linha anterior: <?=constant('NOME');?><hr>
             
             <h4>Super __BLOBAIS:</h4>
             <p>São CONSTANTES cujo o NOME é previamente definidas pela linguagem de programação(PHP), através de palavras chaves(__keywords), que o valor será definido automaticamente pelo sistema em execussão. e sempre começam com dois underlines seguidos do nome em letras maiúculas __GLOBAIS,</p><br><hr>
