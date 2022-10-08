@@ -1,41 +1,14 @@
 @charset "UTF-8";
 /* Aqui vai ser meu arquivo CSS para testes de PHP, criado 20/09/2022 */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 body{
     background-color: rgb(26, 26, 26);
     color: white;
     font-size: 1.1em;
-}
-.menu_lateral{
-    position: fixed;
-    display: block;
-    top: 50px;
-    left: 20px;
-    width: fit-content;
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
-    margin: 0px;
-}
-.menu_lateral a,ul{
-    text-align: right;
-    text-decoration: none;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-}
-.ul_sub{
-    font-size: 10pt;
-    text-align: center;
-}
-.right_bar{
-    position: fixed;
-    display: block;
-    top: 50px;
-    right: 0px;
-    width: 300px;
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-    padding: 10px 30px 10px 0px;
 }
 h1,h2{
     color: rgb(256, 0, 0);
@@ -56,49 +29,84 @@ span.codigo{
     font-family: 'Courier New', Courier, monospace;
     padding: 0 5px 0 5px;
 }
-header.header_nav{
+
+/* Definições do NAV_TOP */
+.nav_top{
     display: flex;
     height: 5vh;
-    align-items: center;
     background-color: black;
     color: antiquewhite;
-    /* border: 1px dotted rgb(111, 248, 48); */
+    
 }
-.div_cookie{
+.nav_row{
     display: flex;
-    padding: 0px;
-}
-.div_data{
-    display: flex;
-    padding: 0px;
-}
-.text_peq{
-    font-size: 0.7em;
-}
-nav.navbar_cont{
-    display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: center;
-    background-color: rgb(31, 30, 30);
-    color: rgb(250, 179, 86);
-    /* border: 1px dashed rgb(250, 179, 86); */
+    justify-content: space-between;
 }
-.div_row{
+.text_cookie{
     display: flex;
-    color: white;
+    width: fit-content;
+    font-size: 0.7em;
+    align-items: center;
+    color: #fff;
+    /* border: 1px dotted rgb(111, 248, 48); */
 }
 .text_menu{
     display: flex;
-    font-size: 1.8em;
-    font-weight: 700;
+    width: fit-content;
+    color: rgb(53, 47, 238);
+    /* border: 1px dotted rgb(111, 248, 48); */
+}
+.ul_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    font-weight: 500;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0px;
-    color: red;
+    margin: 0px;
+    list-style: none;
+    /* border: 1px dotted rgb(111, 248, 48); */
+}
+.ul_drop{
+    background-color: black;
+}
+.ul_drop a{
+    color: #fff;
+}
+.li_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: #fff;
+    list-style: none;
+    /* border: 1px dotted rgb(111, 248, 48); */
+}
+.a_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 0px 30px;
+    /* border: 1px dotted rgb(111, 248, 48); */
+}
+.text_data{
+    display: flex;
+    width: fit-content;
+    font-size: 0.7em;
+    align-items: center;
+    justify-content: end;
+    color: #fff;
+    /* border: 1px dotted rgb(111, 248, 48); */
 }
 main.main_cont{
     display: flex;
     /* height: 90vh; */
     height: max-content;
+    padding: 0px 50px;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     /* border: 1px solid rgb(221, 133, 17); */

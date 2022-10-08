@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt/br">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de testes</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
 </head>
 <body>
     <?php 
@@ -16,6 +17,7 @@
         if (isset($_POST['input_email'])) {$v_email=$_POST['input_email'];} 
         if (isset($_POST['input_password'])) {$v_password=$_POST['input_password'];} 
     ?>
+    <?php include_once "nav_top.php";?>
     <div class="container-fluid ps-5 pe-5">
         <div class="row justify-content-center">
             <h1 class="alert alert-primary text-center">Bora Praticar PHP</h1>
