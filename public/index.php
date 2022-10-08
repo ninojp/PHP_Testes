@@ -206,10 +206,11 @@ $segundo = date("s");?>
            
 <!--=======================================================================================================================-->
             <h2 class="mt-3">Usando FUNÇÕES pré definidas do PHP</h2>
-
-            <?php
-            echo "<h3>A Função strlen() serve para fazer a contagem de caracteres de uma string</h3>";
-            $v_frase = "Caracteres sem acentuação";
+            Lista completa de funções para trabalhar com Strings:<br>
+            <h3><a href="https://www.php.net/manual/pt_BR/ref.strings.php" target="blank"> Manual do PHP</a> - <a href="https://www.php.net/manual/pt_BR/ref.mbstring.php" target="https://www.php.net/manual/pt_BR/ref.mbstring.php">MultiByte</a> - <a href="https://www.w3schools.com/PhP/php_ref_string.asp" target="">W3schools list</a></h3>
+            
+            A Função strlen() serve para fazer a contagem de caracteres de uma string
+            <?php $v_frase = "Caracteres sem acentuação";
             printf($v_frase);
             $v_str_frase = strlen($v_frase);
             echo "<br>";
