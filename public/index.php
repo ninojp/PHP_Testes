@@ -79,7 +79,8 @@ $segundo = date("s");?>
             <?= "<hr>"; ?><!-- Forma simplificada de imprimir um echo -->
 <!--=======================================================================================================================-->
             <h2 class="mt-3">Tags ECHO e PRINT para Imprimir informações na tela</h2>
-            <?php print(" PRINT:É outra forma de imprimir na tela<br>");?>
+            <span class="codigo">echo</span> e <span class="codigo">print</span> são mais ou menos iguais. Ambos são usados ​​para enviar dados para a tela. As diferenças são pequenas: echo não tem valor de retorno enquanto print tem valor de retorno 1 para que possa ser usado em expressões. echo pode receber vários parâmetros (embora tal uso seja raro) enquanto print pode receber um argumento. echo é marginalmente mais rápido que print.
+            <?php print "PRINT: É outra forma de imprimir na tela<br>";?>
             <?php echo "ECHO: Pode ser nos formatos! ";?><br>
             <span class="codigo">echo $variavel;</span><br>
             <span class="codigo">echo "Entre ASPAS DUPLAS";</span><br>
@@ -95,12 +96,24 @@ $segundo = date("s");?>
             <h4><a href="https://www.php.net/manual/pt_BR/language.variables.basics.php" target="blank">$variaveis</a></h4>
             <p>Para definir o nome de uma variavel basta colocar o <span class="codigo">$nome</span>, na frente da palavra, que não pode começar com numero, nem ter caracteres especiais ou acentuação e nem possuir mais de 32 caracteres, o valor para a mesma deve ser atribuido com <span class="codigo">=valor</span>.</p>
             Para verificar se uma $variavel foi declarada(definida, mesmo q sem valor) usamos: <span class="codigo">isset();</span><br><?php $v_teste='+Variável'; if(isset($v_teste)){ echo "Existe a variavel: ".$v_teste."<br>";}?><br>
-              
-            <h4>Tipos de variaveis:</h4>
+            
+            <h4><a href="https://www.w3schools.com/PhP/php_variables_scope.asp" target="blank"> Escopo de Variáveis PHP:</a></h4>
+            O escopo de uma variável é a parte do script onde a variável pode ser referenciada/usada.<br>
+            O PHP tem três escopos de variáveis ​​diferentes:<br>
+            <span class="codigo">local:</span> Uma variável declarada dentro de uma função tem um LOCAL SCOPE e só pode ser acessada dentro dessa função:<br>
+            <span class="codigo">global:</span> Uma variável declarada fora de uma função tem um GLOBAL SCOPE e só pode ser acessada fora de uma função: A palavra-chave <span class="codigo">global</span> é usada para acessar uma variável global de dentro de uma função. Para fazer isso, use a palavra-chave <span class="codigo">global</span> antes das variáveis ​​(dentro da função):<br>
+            <span class="codigo">estático:</span> Normalmente, quando uma função é concluída/executada, todas as suas variáveis ​​são excluídas. No entanto, às vezes queremos que uma variável local NÃO seja excluída. Precisamos dele para mais um trabalho. Para fazer isso, use a palavra-chave <span class="codigo">static</span> ao declarar a variável pela primeira vez:<br>
+
+            <h4><a href="https://www.w3schools.com/PhP/php_datatypes.asp" target="blank">Tipos de variaveis:</a></h4>
             <?php $v_numero=41;?><span class="codigo">$inteiro = <?=$v_numero?>;</span> Tipo (numérico)Inteiro, (int) (integer)<br>
             <?php $v_nome="palavra";?><span class="codigo">$caracter = "<?=$v_nome?>";</span> Deve ser declarada entre aspas, simples ou dupla (string)<br> 
             <span class="codigo">$real = 1.47;</span> Deve sempre ser separado por ponto, (float) (double) (real)<br>
-            <span class="codigo">$logico = true;</span> Pode ser (false = 0) ou (true = 1)<br><br>
+            <span class="codigo">$logico = true;</span> Pode ser (false = 0) ou (true = 1)<br>
+            <span class="codigo">$array = ['indice0'=>'valor','indice1'=>'valor1'];</span> Será detalhado mais abaixo nesta pagina.<br>
+            <span class="codigo">Object:</span>Será detalhado na parte de programação orientada a objetos<br>
+            <span class="codigo">NULL:</span> Uma variável do tipo de dados NULL é uma variável que não tem valor atribuído a ela.<br>
+            <span class="codigo">Resource:</span> O tipo de recurso especial não é um tipo de dados real. É o armazenamento de uma referência a funções e recursos externos ao PHP. Um exemplo comum de uso do tipo de dados de recurso é uma chamada de banco de dados.<br>
+
             <h4>Variáveis pré-definidas</h4>
                 Superglobais — Variáveis nativas que estão sempre disponíveis em todos escopos<br>
                 <span class="codigo">$GLOBALS</span> — Referencia todas variáveis disponíveis no escopo global<br>
@@ -193,6 +206,7 @@ $segundo = date("s");?>
            
 <!--=======================================================================================================================-->
             <h2 class="mt-3">Usando FUNÇÕES pré definidas do PHP</h2>
+
             <?php
             echo "<h3>A Função strlen() serve para fazer a contagem de caracteres de uma string</h3>";
             $v_frase = "Caracteres sem acentuação";
@@ -201,7 +215,7 @@ $segundo = date("s");?>
             echo "<br>";
             echo "O numero de caracter da frase é: $v_str_frase";
             echo "<br>";
-            echo "<h5>Já o mb_strlen() serve para fazer a contagem de caracteres de forma mais precisa no nosso padrão de caracteres, com acentuação</h5>";
+            echo "<h5>Já o mb_strlen(), (mb_ multbyte string functions), serve para fazer a contagem de caracteres de forma mais precisa no nosso padrão(utf-8) de caracteres, com acentuação</h5>";
             $v_frase2 = "Caracteres com acentuação";
             printf($v_frase2);
             $v_str_frase2 = mb_strlen($v_frase2);
