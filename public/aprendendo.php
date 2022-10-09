@@ -2,17 +2,21 @@
     <h2 class="">Tags de comentário do PHP</h2>
     <div class="row">
         <div class="col"><!-- Os comentários no HTML são neste formato -->
-    # Os comentários no PHP são neste formato <br>
-    // Os comentários no PHP são neste formato<br>
-    /* Os comentários no PHP são neste formato, para comentar mais de uma linha */<br></div>
+        <span class="codigo">#</span> Os comentários em LINHA no PHP podem ser neste formato <br>
+        <span class="codigo">//</span> Os comentários de apenas uma LINHA tembém podem ser neste formato.<br>
+        <span class="codigo">/*</span> Já os comentários em bloco, mais de uma linha, são neste formato... <span class="codigo">*/</span><br>
+        <span class="codigo">/*</span>********************************************************************************************<br> 
+        * lembrando que o <span class="codigo">\</span> barra invertida, serve como caracter de escape, para dizer que o<br>
+        * próximo caracter dever tratado como string, não tendo um sentido lógico no codigo.<br>
+        ***********************************************************************************************<span class="codigo">*/</span><br></div>
         <div class="col"><h4><a href="https://www.php.net/manual/pt_BR/extensions.membership.php#extensions.membership.core" target="blank">Extensões Principais</a></h4>Essas não são de fato extensões. Eles são parte do núcleo do PHP e não podem ser deixadas de fora do binário do PHP através de opções de compilação.</div>
      </div>
     <?= "<hr>"; ?><!-- Forma simplificada de imprimir um echo, não indicada apartir o PHP 7 -->
 <!--=======================================================================================================================-->
     <h2 class="mt-3">Tags ECHO e PRINT para Imprimir informações na tela</h2>
-    <span class="codigo">echo</span> e <span class="codigo">print</span> são mais ou menos iguais. Ambos são usados ​​para enviar dados para a tela. As diferenças são pequenas: echo não tem valor de retorno enquanto print tem valor de retorno 1 para que possa ser usado em expressões. echo pode receber vários parâmetros (embora tal uso seja raro) enquanto print pode receber um argumento. echo é marginalmente mais rápido que print.
-    <?php print "PRINT: É outra forma de imprimir na tela<br>"; ?>
-    <?php echo "ECHO: Pode ser nos formatos! "; ?><br>
+    <span class="codigo">echo</span> e <span class="codigo">print</span> são mais ou menos iguais. Ambos são usados ​​para enviar dados para a tela. As diferenças são pequenas: echo não tem valor de retorno enquanto print tem valor de retorno 1 para que possa ser usado em expressões. echo pode receber vários parâmetros (embora tal uso seja raro) enquanto print pode receber um argumento. echo é marginalmente mais rápido que print.<br>
+    <?php print "PRINT: É outra forma de imprimir na tela<br>";
+    echo "ECHO: Pode ser nos formatos!<br>"; ?>
     <span class="codigo">echo $variavel;</span><br>
     <span class="codigo">echo "Entre ASPAS DUPLAS";</span><br>
     <span class="codigo">echo 'Entre ASPAS SIMPLES';</span><br>
@@ -131,8 +135,42 @@
     <hr>
 <!--=======================================================================================================================-->
 <h2 class="mt-3">OPERADORES:</h2>
-    <h3 class="mt-3">Operadores Logicos ou Aritméticos:</h3>
-
+    <h3 class="mt-1">Operadores: <a href="https://www.php.net/manual/pt_BR/language.operators.php" target="_blank">Manual PHP</a> ou <a href="https://www.w3schools.com/php/php_operators.asp" target="_blank">W3schools</a></h3>
+    <div class="row">
+        <div class="col">
+            <table class="table table-dark table-striped"><thead><tr>
+            <th>Operador</th><th>Nome</th><th>Exemplo</th><th>Resultado</th>
+            </tr></thead>
+            <tbody>
+                <tr><td>+$a</td><td>Identidade</td><td>+$variável</td><td>Conversão de $a para int ou float conforme apropriado.</td></tr>
+                <tr><td>-$a</td><td>Negação</td><td>-$variável</td><td>Oposto de $a.</td></tr>
+                <tr><td>+</td><td>Adição</td><td>$a + $b</td><td>Soma de $a e $b.</td></tr>
+                <tr><td>-</td><td>Subtração</td><td>$a - $b</td><td>Diferença entre $a e $b.</td></tr>
+                <tr><td>*</td><td>Multiplicação</td><td>$a * $b</td><td>Produto de $a e $b.</td></tr>
+                <tr><td>/</td><td>Divisão</td><td>$a / $b</td><td>Quociente de $a e $b.</td></tr>
+                <tr><td>%</td><td>Módulo</td><td>$a % $b</td><td>Resto de $a dividido por $b.</td></tr>
+                <tr><td>**</td><td>Exponencial</td><td>$a ** $b</td><td>Resultado de $a elevado a $b. Introduzido no PHP 5.6.</td></tr>
+            </tbody>
+            </table></div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+        <table class="table table-dark table-striped"><thead><tr>
+            <th>Exemplo</th><th>Nome</th><th>Resultado</th>
+        </tr></thead>
+        <tbody>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
 
 <!--=======================================================================================================================-->
     

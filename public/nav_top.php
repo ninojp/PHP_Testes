@@ -35,7 +35,7 @@ $segundo = date("s");
                 <ul class="dropdown-menu ul_drop" aria-labelledby="dropdown_joao">
                     <li class="li_menu"><a class="dropdown-item" href="https://www.youtube.com/watch?v=krQj4stNu5U&list=PLXik_5Br-zO_5EGPG6_u-u0hVI_f_ThO_" target="_blank">PHP Boas Práticas 2017</a><li>
                     <li class="li_menu"><a class="dropdown-item" href="https://www.youtube.com/watch?v=jVUeF7cZdFE&list=PLXik_5Br-zO9wODVI0j58VuZXkITMf7gZ" target="_blank">PHP Curso Completo 2020</a><li>
-                    <li class="li_menu"><a class="dropdown-item" href="https://www.youtube.com/watch?v=iDEuQjITm0E&list=PLXik_5Br-zO9Z8l3CE8zaIBkVWjHOboeL" target="_blank">Curso Completo Parte2 2021</a><li>
+                    <li class="li_menu"><a class="dropdown-item" href="https://www.youtube.com/watch?v=iDEuQjITm0E&list=PLXik_5Br-zO9Z8l3CE8zaIBkVWjHOboeL" target="_blank">Parte2 Curso Completo 2021</a><li>
                     <li class="li_menu"><a class="dropdown-item" href="https://www.youtube.com/watch?v=OMn8y1RE4FE&list=PLXik_5Br-zO-tsUy1lTPB8dnPGBu8n0Ee&index=3" target="_blank">PHP Loja Virtual</a></li>
                     <li class="li_menu"><a class="dropdown-item" href="https://www.youtube.com/watch?v=gsPp71nRMQk&list=PLXik_5Br-zO8vLD6X9uB-EH6BpgZL8XBH" target="_blank">PHP APIs</a></li>
                 </ul>
