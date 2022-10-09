@@ -11,7 +11,7 @@
 <body>
     <?php require_once "nav_top.php";
     // include_once "header.php";?>
-    <h1 class="m-3 text-center"><a href="index.php?a=inicio" target="blank">Aprendendo</a> - <a href="index.php?a=praticando" target="blank">Praticando</a> - <a href="index.php?a=banco_dados" target="blank">Banco de Dados</a></h1>
+    <h2 class="m-3 text-center"><a href="index.php?a=inicio" target="_self">Aprendendo</a> - <a href="index.php?a=praticando" target="_blank">Praticando</a> - <a href="index.php?a=funcoes" target="_blank">Funções do PHP</a> - <a href="index.php?a=banco_dados" target="_new">Banco de Dados</a> - <a href="index.php?a=php_oop" target="_new">PHP OOP</a></h2>
 <!--=======================================================================================================================-->
     <main class="main_cont container-fluid">
     <!-- testando um método que aprendi no curso do João Ribeiro, PHP 2017 -->
@@ -28,8 +28,14 @@
             case 'praticando':
                 include 'praticando.php';
                 break;
+            case 'funcoes':
+                include 'funcoes.php';
+                break;
             case 'banco_dados':
                 include 'banco_dados.php';
+                break;
+            case 'php_oop':
+                include 'php_oop.php';
                 break;
         }?>
     </main>
@@ -37,6 +43,5 @@
     <footer class="foot_cont container-fluid">
         <div class="div_cont col-12"> Rodapé da pagina</div>
     </footer>
-    <script src="js/bootstrap.js"></script>
 </body>
 </html>

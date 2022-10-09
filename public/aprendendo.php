@@ -1,12 +1,13 @@
 <section class="sec_princ">
-    <h2 class="mt-3">Tags de comentário do PHP</h2>
-    <!-- Os comentários no HTML são neste formato -->
+    <h2 class="">Tags de comentário do PHP</h2>
+    <div class="row">
+        <div class="col"><!-- Os comentários no HTML são neste formato -->
     # Os comentários no PHP são neste formato <br>
     // Os comentários no PHP são neste formato<br>
-    /* Os comentários no PHP são neste formato, para comentar mais de uma linha */<br><br>
-    <h4><a href="https://www.php.net/manual/pt_BR/extensions.membership.php#extensions.membership.core" target="blank">Extensões Principais</a></h4>
-    <?= "<hr>"; ?>
-    <!-- Forma simplificada de imprimir um echo -->
+    /* Os comentários no PHP são neste formato, para comentar mais de uma linha */<br></div>
+        <div class="col"><h4><a href="https://www.php.net/manual/pt_BR/extensions.membership.php#extensions.membership.core" target="blank">Extensões Principais</a></h4>Essas não são de fato extensões. Eles são parte do núcleo do PHP e não podem ser deixadas de fora do binário do PHP através de opções de compilação.</div>
+     </div>
+    <?= "<hr>"; ?><!-- Forma simplificada de imprimir um echo, não indicada apartir o PHP 7 -->
 <!--=======================================================================================================================-->
     <h2 class="mt-3">Tags ECHO e PRINT para Imprimir informações na tela</h2>
     <span class="codigo">echo</span> e <span class="codigo">print</span> são mais ou menos iguais. Ambos são usados ​​para enviar dados para a tela. As diferenças são pequenas: echo não tem valor de retorno enquanto print tem valor de retorno 1 para que possa ser usado em expressões. echo pode receber vários parâmetros (embora tal uso seja raro) enquanto print pode receber um argumento. echo é marginalmente mais rápido que print.
@@ -92,10 +93,6 @@
     <p>São CONSTANTES cujo o NOME é previamente definidas pela linguagem de programação(PHP), através de palavras chaves(__keywords), que o valor será definido automaticamente pelo sistema em execussão. e sempre começam com dois underlines seguidos do nome em letras maiúculas __GLOBAIS,</p><br>
     <hr>
 <!--=======================================================================================================================-->
-    <h2 class="mt-3">OPERADORES:</h2>
-    <h3 class="mt-3">Operadores Logicos ou Aritméticos:</h3>
-
-<!--=======================================================================================================================-->
     <h2 class="mt-3">ARRAYs:</h2>
     <p>O array pode ser declarado misturando tipos de valores, mixed: string, numeros, float<br>
         Para declarar um array usamos os seguintes formatos:</p>
@@ -132,38 +129,11 @@
     Usando o var_dump com a tag PRE do html:
     <pre><?php var_dump($a_nome); ?></pre>
     <hr>
+<!--=======================================================================================================================-->
+<h2 class="mt-3">OPERADORES:</h2>
+    <h3 class="mt-3">Operadores Logicos ou Aritméticos:</h3>
+
 
 <!--=======================================================================================================================-->
-    <h2 class="mt-3">Usando FUNÇÕES pré definidas do PHP</h2><br>
-    <h4>Lista completa de funções para trabalhar com Strings:</h4>
-    <h3><a href="https://www.php.net/manual/pt_BR/ref.strings.php" target="blank"> Manual do PHP</a> - <a href="https://www.php.net/manual/pt_BR/ref.mbstring.php" target="https://www.php.net/manual/pt_BR/ref.mbstring.php">MultiByte</a> - <a href="https://www.w3schools.com/PhP/php_ref_string.asp" target="">W3schools list</a></h3>
-
-    A Função strlen() serve para fazer a contagem de caracteres de uma string
-    <?php $v_frase = "Caracteres sem acentuação";
-    printf($v_frase);
-    $v_str_frase = strlen($v_frase);
-    echo "<br>";
-    echo "O numero de caracter da frase é: $v_str_frase";
-    echo "<br>";
-    echo "<h5>Já o mb_strlen(), (mb_ multbyte string functions), serve para fazer a contagem de caracteres de forma mais precisa no nosso padrão(utf-8) de caracteres, com acentuação</h5>";
-    $v_frase2 = "Caracteres com acentuação";
-    printf($v_frase2);
-    $v_str_frase2 = mb_strlen($v_frase2);
-    echo "<br>";
-    echo "O numero de caracter da frase é: $v_str_frase2";
-    ?>
-    <h4>A Função str_replace() serve para subtituir um caracter por outro dentro de uma string</h4>
-    <?php
-    #STR_REPLACE serve para subtituir um caracter por outro dentro de uma string
-    $v_valor = "1_000.00";
-    echo $v_valor . "<br>";
-    $v_novo_valor = str_replace('_', ' ', $v_valor);
-    echo "String com substituição de caracter: " . $v_novo_valor;
-    echo "<br>";
-    $v_data = "27-09-2022";
-    $v_novo_data = str_replace('-', '/', $v_data);
-    echo $v_data . "<br>";
-    echo "substituição do - por /: " . $v_novo_data;
-    echo "<br><hr>"; ?>
-    <h4>Lista completa de funções para trabalhar Numeros:</h4>
+    
 </section>
